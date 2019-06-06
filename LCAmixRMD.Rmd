@@ -11,8 +11,6 @@ library(poLCA)
 library(formattable)
 ```
 
-## R Markdown
-
 This is a simulated example of using latent class analysis in the area of chemical mixtures modeling. This example is referred to in a paper entitled "Latent classes for chemical mixtures analyses in epidemiology: An example using phthlate and phenol exposure biomarkers in pregnant women" by Carroll R. et. al. 
 
 The following chunk of R code is for reading in the simulated data so that you can run the example. The data includes 3 continuous covariates (x1, x2, and x3), nine moderately correlated chemical measures (m1-m9), and a continuous outcome (y).
@@ -28,7 +26,7 @@ As our first step of analysis, we will examine the correlation matrix of the che
 
 ```{r}
 library(corrplot)
-cor(ExData[,5:13])
+round(cor(ExData[,5:13]),2)
 corrplot(cor(ExData[,5:13]),method="color",tl.col="black")
 
 ```
